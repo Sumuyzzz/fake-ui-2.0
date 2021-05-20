@@ -7,8 +7,10 @@
 
 	export default {
 		setup() {
-			const menuVisible = ref(true);
+			const viewWidth = document.documentElement.clientWidth;
+			const menuVisible = ref(viewWidth <= 500 ? false : true);
 			provide("menuVisible", menuVisible);
+			console.log(viewWidth);
 		},
 	};
 </script>

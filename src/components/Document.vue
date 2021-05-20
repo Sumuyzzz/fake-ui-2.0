@@ -29,7 +29,7 @@
 	export default {
 		components: { Topnav },
 		setup() {
-			const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+			const menuVisible = inject<Ref<boolean>>("menuVisible"); 
 			return { menuVisible };
 		},
 	};
