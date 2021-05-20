@@ -3,12 +3,12 @@
 </template>
 
 <script>
-	import HelloWorld from "./components/HelloWorld.vue";
+	import { ref, provide } from "vue";
 
 	export default {
-		name: "App",
-		components: {
-			HelloWorld,
+		setup() {
+			const menuVisible = ref(true);
+			provide("menuVisible", menuVisible);
 		},
 	};
 </script>
