@@ -1,17 +1,15 @@
 <template>
-	<p>Tabs 的文档</p>
-	<p>Tabs 的文档</p>
-	<p>Tabs 的文档</p>
-	<p>da43242</p>
-	<p>Tabs 的文档</p>
-	<p>Tabs 的文档</p>
-	<p>Tabs 的文档</p>
-	<p>Tabs 的文档</p>
-	<p>button</p>
+  <div>Button 示例</div>
+  <h1>示例1</h1>
+  <div>
+    <Button>你好</Button>
+  </div>
 </template>
-
-<script>
-	export default {};
+<script lang="ts">
+import Button from "../lib/Button.vue";
+export default {
+  components: { Button },
+};
 </script>
 
 <style>
