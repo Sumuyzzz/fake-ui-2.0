@@ -1,12 +1,21 @@
 <template>
-  <button>
+  <div :size="size">
+  <button v-bind="reset">
     <slot />
   </button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Button"
+ inheritAttrs:false,
+  props:{
+
+  },
+  setup( props ,context){
+   const {size ,reset}=context=context.attrs;
+   return {size,reset}
+  }
 }
 </script>
 
