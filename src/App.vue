@@ -9,7 +9,7 @@
 	export default {
 		setup() {
 			const viewWidth = document.documentElement.clientWidth;
-			const menuVisible = ref(viewWidth <= 500 ? false : true);
+			const menuVisible = ref(viewWidth > 500);
 			provide("menuVisible", menuVisible);
 			console.log(viewWidth);
 			router.afterEach(() => {
