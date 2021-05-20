@@ -1,11 +1,11 @@
 <template>
 	<Switch v-model:value="boolean" />
-  {{value}}
+	{{ value }}
 </template>
 
 <script>
 	import Switch from "../lib/Switch.vue";
-  import {ref} from "vue";
+	import { ref } from "vue";
 	export default {
 		components: { Switch },
 		setup() {

@@ -14,7 +14,7 @@
 			console.log(viewWidth);
 			router.afterEach(() => {
 				if (viewWidth <= 500) {
-					menuVisible.value = false;
+					menuVisible.value = faljse;
 				}
 			});
 		},

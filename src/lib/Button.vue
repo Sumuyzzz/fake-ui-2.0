@@ -1,18 +1,34 @@
 <template>
-	<button class="fake-button" :class="{ [`fake-theme-${theme}`]: theme }">
+	<button class="fake-button" :class="classes">
 		<slot />
 	</button>
 </template>
 
 <script>
-	export default {
+import {computed} from "vue";
+
+export default {
 		inheritAttrs: false,
 		props: {
 			theme: {
 				type: String,
 				default: "button",
 			},
+      size:{
+			  type:String,
+        default: "normal",
+      }
 		},
+  setup(props){
+		  const {theme,size} =props;
+		  const classes=computed(()=>{
+		    return{
+          [`fake-theme-${theme}`]: theme,
+          [`fake-size-${size}`]: size,
+        }
+      })
+    return{classes}
+  }
 	};
 </script>
 
@@ -21,6 +37,7 @@
 	$border-color: #d9d9d9;
 	$color: #333;
 	$blue: #40a9ff;
+  $white:#fff;
 	$radius: 4px;
 	.fake-button {
 		box-sizing: border-box;
@@ -54,5 +71,35 @@
 		&::-moz-focus-inner {
 			border: 0;
 		}
+    &.fake-theme-link {
+      border-color: transparent;
+      box-shadow: none;
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: lighten($blue, 10%);
+      }
+    }
+    &.fake-theme-text {
+      border-color: transparent;
+      box-shadow: none;
+      color: inherit;
+      &:hover,
+      &:focus {
+        background: darken(white, 5%);
+      }
+    }
+    &.fake-theme-button{
+      &.fake-size-big{
+        font-size: 24px;
+        height: 48px;
+        padding: 0 16px
+      }
+      &.fake-size-small{
+        font-size: 12px;
+        height: 20px;
+        padding: 0 4px;
+      }
+    }
 	}
 </style>
