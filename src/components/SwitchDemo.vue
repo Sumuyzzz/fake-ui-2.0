@@ -1,5 +1,5 @@
 <template>
-	<Switch v-model:value="y" />
+	<Switch v-model:value="boolean" />
   {{value}}
 </template>
 
@@ -9,9 +9,9 @@
 	export default {
 		components: { Switch },
 		setup() {
-			const y = ref(false);
+			const boolean = ref(false);
 
-			return { y };
+			return { boolean };
 		},
 	};
 </script>

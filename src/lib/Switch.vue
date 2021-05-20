@@ -45,6 +45,12 @@
 	}
 	button.checked > span {
 		left: calc(100% - #{$h2} - 2px);
-    transition: all 1s ease-in-out;
+    transition: all 250ms;
 	}
+  button:active{
+    > span {width: $h2 + 4px;}
+  }
+  button.checked:active{
+    > span {width: $h2 + 4px; margin-left: -4px;}
+  }
 </style>
