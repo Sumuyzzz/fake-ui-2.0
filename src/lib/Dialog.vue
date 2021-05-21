@@ -4,12 +4,11 @@
 		<div class="fake-dialog-wrapper">
 			<div class="fake-dialog">
 				<header>
-					标题
+				<slot name="title"></slot>
 					<span @click="close" class="fake-dialog-close"></span>
 				</header>
 				<main>
-					<p>第一行字</p>
-					<p>第二行字</p>
+					<slot name="content"></slot>
 				</main>
 				<footer>
 					<Button level="main" @click="ok">OK</Button>
