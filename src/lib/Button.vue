@@ -19,7 +19,7 @@ export default {
         default: "normal",
       }
 		},
-  setup(props){
+    setup(props){
 		  const {theme,size} =props;
 		  const classes=computed(()=>{
 		    return{
@@ -89,7 +89,7 @@ export default {
         background: darken(white, 5%);
       }
     }
-    &.fake-theme-button{
+
       &.fake-size-big{
         font-size: 24px;
         height: 48px;
@@ -100,6 +100,6 @@ export default {
         height: 20px;
         padding: 0 4px;
       }
-    }
+
 	}
 </style>
