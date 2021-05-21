@@ -1,32 +1,34 @@
 <template>
 	<template v-if="visible">
-		<div class="fake-dialog-overlay" @click="onClickOverlay"></div>
-		<div class="fake-dialog-wrapper">
-			<div class="fake-dialog">
-				<header>
-				<slot name="title"></slot>
-					<span @click="close" class="fake-dialog-close"></span>
-				</header>
-				<main>
-					<slot name="content"></slot>
-				</main>
-				<footer>
-					<Button level="main" @click="ok">OK</Button>
-					<Button @click="cancel">Cancel</Button>
-				</footer>
+		<Teleport to="body">
+			<div class="fake-dialog-overlay" @click="onClickOverlay"></div>
+			<div class="fake-dialog-wrapper">
+				<div class="fake-dialog">
+					<header>
+						<slot name="title" />
+						<span @click="close" class="fake-dialog-close"></span>
+					</header>
+					<main>
+						<slot name="content" />
+					</main>
+					<footer>
+						<Button level="main" @click="ok">OK</Button>
+						<Button @click="cancel">Cancel</Button>
+					</footer>
+				</div>
 			</div>
-		</div>
+		</Teleport>
 	</template>
 </template>
 
+
 <script lang="ts">
 	import Button from "./Button.vue";
-
 	export default {
 		props: {
 			visible: {
 				type: Boolean,
-				default: true,
+				default: false,
 			},
 			closeOnClickOverlay: {
 				type: Boolean,
@@ -60,7 +62,12 @@
 				context.emit("cancel");
 				close();
 			};
-			return { close, onClickOverlay, ok, cancel };
+			return {
+				close,
+				onClickOverlay,
+				ok,
+				cancel,
+			};
 		},
 	};
 </script>
@@ -68,6 +75,7 @@
 <style lang="scss">
 	$radius: 4px;
 	$border-color: #d9d9d9;
+
 	.fake-dialog {
 		background: white;
 		border-radius: $radius;
