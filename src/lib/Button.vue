@@ -9,7 +9,6 @@
 import {computed} from "vue";
 
 export default {
-		inheritAttrs: false,
 		props: {
       theme: {
         type: String,
@@ -39,7 +38,6 @@ export default {
         [`fake-theme-${theme}`]: theme,
         [`fake-size-${size}`]: size,
         [`fake-level-${level}`]: level,
-
       }
     })
     return {classes}

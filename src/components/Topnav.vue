@@ -9,16 +9,18 @@
 	</div>
 </template>
 <script lang="ts">
-	import { inject, Ref } from "vue";
-	export default {
-		setup() {
-			const menuVisible = inject<Ref<Boolean>>("menuVisible");
-			const toggleMenu = () => {
-				menuVisible.value = !menuVisible.value;
-			};
-			return { toggleMenu };
-		},
-	};
+import {inject, Ref} from "vue";
+
+export default {
+  setup() {
+    const menuVisible = inject<Ref<Boolean>>("menuVisible");
+    const toggleMenu = () => {
+      menuVisible.value = !menuVisible.value;
+      console.log(menuVisible.value)
+    };
+    return {toggleMenu};
+  },
+};
 </script>
 <style lang="scss" scoped>
 	.topnav {
