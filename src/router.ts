@@ -1,4 +1,4 @@
-import { createWebHashHistory, createRouter } from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import Home from './components/Home.vue'
 import Document from './components/Document.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
@@ -24,6 +24,3 @@ export const router = createRouter({
     ]
 })
 
-router.afterEach(() => {
-    console.log("路由切换了");
-});

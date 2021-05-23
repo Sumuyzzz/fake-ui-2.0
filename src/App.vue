@@ -11,7 +11,6 @@ export default {
     const viewWidth = document.documentElement.clientWidth;
     const menuVisible = ref(viewWidth > 500);
     provide("menuVisible", menuVisible);
-    console.log(viewWidth);
     router.afterEach(() => {
       if (viewWidth <= 500) {
         menuVisible.value = false;

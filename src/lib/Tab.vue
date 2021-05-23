@@ -5,7 +5,8 @@
 <script>
 export default {
   props: {
-    title: String
+    title: String,
+    class: String
   }
 
 };
