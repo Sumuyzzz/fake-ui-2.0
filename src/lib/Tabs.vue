@@ -1,7 +1,8 @@
 <template>
   <div class="fake-tabs">
     <div ref="container" class="fake-tabs-nav">
-      <div v-for="(title,index) in titles" :key="index" :ref="el=>{if(el)navItems[index]=el}"
+      <div v-for="(title,index) in titles" :key="index" :ref="el=>{if(title===selected)
+        selectedItem=el}"
            :class="{selected: title=== selected}" class="fake-tabs-nav-item"
            @click="select(title)">{{ title }}
       </div>
@@ -15,6 +16,7 @@
 </template>
 
 <script lang="ts">
+
 import Tab from './Tab.vue'
 import {computed, onMounted, onUpdated, ref} from 'vue'
 
@@ -42,22 +44,23 @@ export default {
     const select = (title: string) => {
       context.emit('update:selected', title)
     }
-    const navItems = ref<HTMLDivElement[]>([])
+
+    const selectedItem = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
     const container = ref<HTMLDivElement>(null)
     const x = () => {
-      const divs = navItems.value
-      const result = divs.find(div => div.classList.contains('selected'))
+
+
       const {
         width
-      } = result.getBoundingClientRect()
+      } = selectedItem.value.getBoundingClientRect()
       indicator.value.style.width = width + 'px'
       const {
         left: left1
       } = container.value.getBoundingClientRect()
       const {
         left: left2
-      } = result.getBoundingClientRect()
+      } = selectedItem.value.getBoundingClientRect()
       const left = left2 - left1
       indicator.value.style.left = left + 'px'
     }
@@ -69,7 +72,7 @@ export default {
       titles,
       current,
       select,
-      navItems,
+      selectedItem,
       indicator,
       container,
     }
