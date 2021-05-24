@@ -1,7 +1,7 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <a href="/">
+      <a href="#">
         <svg>
           <use xlink:href="#iconhome"></use>
         </svg>
