@@ -5,11 +5,10 @@
 		<Button @click="toggle">Toggle</Button>
 		<Dialog v-model:visible="x" :ok="f1" :cancel="f2">
 			<template v-slot:content>
-				<strong>hi</strong>
-				<div>hi2</div>
+<span>这是dialog内容</span>
 			</template>
 			<template v-slot:title>
-				<strong>加粗的标题</strong>
+				<strong>标题</strong>
 			</template>
 		</Dialog>
 	</div>
