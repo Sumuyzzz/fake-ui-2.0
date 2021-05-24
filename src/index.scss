@@ -3,18 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul,
 ol {
   list-style: none;
 }
+
 a {
-  text-decoration: none;
   color: inherit;
+
   &:hover {
-    border-bottom: 1px solid;
-    cursor:pointer;
+
+    cursor: pointer;
   }
 }
+
 body {
   font-size: 16px;
   // 为什么这样写 font-family
