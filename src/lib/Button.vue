@@ -29,15 +29,20 @@ export default {
       loading: {
         type: Boolean,
         default: false
+      },
+      color: {
+        type: String,
+        default: "normal"
       }
     },
   setup(props) {
-    const {theme, size, level} = props;
+    const {theme, size, level, color} = props;
     const classes = computed(() => {
       return {
         [`fake-theme-${theme}`]: theme,
         [`fake-size-${size}`]: size,
         [`fake-level-${level}`]: level,
+        [`fake-color-${color}`]: color
       }
     })
     return {classes}
@@ -71,7 +76,8 @@ $radius: 4px;
   transition: background 250ms;
 
   & + & {
-    margin-left: 8px;
+    margin-left: 30px;
+
   }
 
   &:hover,
