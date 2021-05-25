@@ -6,7 +6,7 @@
 			<h4>用于学习框架的UI组件库</h4>
 			<p class="actions">
 				<a href="https://github.com/Sumuyzzz/fake-ui-2.0">GitHub</a>
-				<router-link to="/doc">起步</router-link>
+				<router-link to="/doc/intro">起步</router-link>
 			</p>
 		</div>
 	</div>
@@ -86,7 +86,7 @@
 	.features {
 		@media screen and (min-width: 500px) {
 			margin: auto;
-			width: 400px;
+			width: 450px;
 		}
 
 		@media screen and (min-width: 800px) {
@@ -105,7 +105,7 @@
 				width: 400px;
 				margin: 16px 0;
 				display: grid;
-				justify-content: center;
+				justify-content: start;
 				align-content: space-between;
 				grid-template-areas:
 					"icon title"
