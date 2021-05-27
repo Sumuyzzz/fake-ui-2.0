@@ -30,19 +30,14 @@
 				type: Boolean,
 				default: false,
 			},
-			color: {
-				type: String,
-				default: "normal",
-			},
 		},
 		setup(props) {
-			const { theme, size, level, color } = props;
+			const { theme, size, level } = props;
 			const classes = computed(() => {
 				return {
 					[`fake-theme-${theme}`]: theme,
 					[`fake-size-${size}`]: size,
 					[`fake-level-${level}`]: level,
-					[`fake-color-${color}`]: color,
 				};
 			});
 			return { classes };

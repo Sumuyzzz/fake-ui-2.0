@@ -16,7 +16,7 @@
 <script lang="ts">
 	import "prismjs";
 	import "prismjs/themes/prism.css";
-	import Button from "../../lib/Button.vue";
+	import Button from "../lib/Button.vue";
 	import { ref, computed } from "vue";
 	const Prism = (window as any).Prism;
 	export default {

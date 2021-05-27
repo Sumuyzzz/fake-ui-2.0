@@ -1,6 +1,10 @@
-<demo>Loading</demo>
+<demo>Theme</demo>
 <template>
-	<Button loading>加载中...</Button>
+	<div>
+		<Button theme="button">Default</Button>
+		<Button theme="link">Link</Button>
+		<Button theme="text">Text</Button>
+	</div>
 </template>
 
 <script lang="ts">

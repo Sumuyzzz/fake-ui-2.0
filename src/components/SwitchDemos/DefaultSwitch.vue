@@ -1,5 +1,5 @@
 <demo>
-常规用法
+Base
 </demo>
 <template>
 	<Switch v-model:value="bool" />
