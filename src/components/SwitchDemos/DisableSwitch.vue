@@ -1,3 +1,4 @@
+<demo>disabled</demo>
 <template>
 	<Switch v-model:value="bool" disabled />
 </template>
@@ -18,6 +19,3 @@
 	};
 </script>
 
-<style lang="scss" scope>
-
-</style>

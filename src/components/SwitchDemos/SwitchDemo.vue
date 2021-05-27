@@ -4,16 +4,13 @@
 		<div class="demo">
 			<h2>默认开关</h2>
 			<div class="demo-component">
-				<DefultSwitch />
+				<component :is="DefultSwitch"></component>
 			</div>
 			<div class="demo-actions">
 				<Button> 查看代码 </Button>
 			</div>
 			<div class="demo-code">
-				<pre>
-                &lt;Switch v-model:value="bool" /&gt;
-            </pre
-				>
+				<pre>{{ DefultSwitch.__sourceCode }}</pre>
 			</div>
 		</div>
 		<div class="demo">
@@ -25,10 +22,7 @@
 				<Button>查看代码</Button>
 			</div>
 			<div class="demo-code">
-				<pre>
-            &lt;Switch v-model:value="bool" disabled /&gt;
-            </pre
-				>
+				<pre>{{ DisableSwitch.__sourceCode }}</pre>
 			</div>
 		</div>
 	</div>
@@ -40,7 +34,10 @@
 	import Button from "../../lib/Button.vue";
 
 	export default {
-		components: { DisableSwitch, DefultSwitch, Button },
+		components: { DisableSwitch, Button },
+		setup() {
+			return { DefultSwitch, DisableSwitch };
+		},
 	};
 </script>
 

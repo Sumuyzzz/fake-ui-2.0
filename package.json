@@ -8,6 +8,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^1.2.2",
     "github-markdown-css": "^4.0.0",
+    "prismjs": "^1.23.0",
     "vue": "^3.0.0-rc.1",
     "vue-router": "4.0.0-beta.3"
   },
