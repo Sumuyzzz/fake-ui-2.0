@@ -15,11 +15,12 @@ a {
 
   &:hover {
 
-    cursor: pointer;
+    cursor:pointer ;
   }
 }
 
 body {
+  overflow: auto;
   font-size: 16px;
   // 为什么这样写 font-family
   // 答案见 https://github.com/zenozeng/fonts.css/

@@ -24,7 +24,7 @@
 			component: Object,
 		},
 		setup(props) {
-			const Code = computed(() => {
+			const Code = computed((): any => {
 				return Prism.highlight(
 					props.component.__sourceCode,
 					Prism.languages.html,
@@ -32,7 +32,7 @@
 				);
 			});
 			const codeVisible = ref(false);
-			const showCode = () => (codeVisible.value = !codeVisible.value);
+			const showCode = (): boolean => (codeVisible.value = !codeVisible.value);
 			return {
 				Prism,
 				Button,

@@ -6,7 +6,7 @@
 			<h4>用于学习框架的UI组件库</h4>
 			<p class="actions">
 				<a href="https://github.com/Sumuyzzz/fake-ui-2.0">GitHub</a>
-				<router-link to="/doc/intro">起步</router-link>
+				<router-link to="/doc">起步</router-link>
 			</p>
 		</div>
 	</div>
