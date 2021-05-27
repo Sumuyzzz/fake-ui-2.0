@@ -5,7 +5,7 @@
 		<Button @click="toggle">Toggle</Button>
 		<Dialog v-model:visible="x" :ok="f1" :cancel="f2">
 			<template v-slot:content>
-<span>这是dialog内容</span>
+				<span>这是dialog内容</span>
 			</template>
 			<template v-slot:title>
 				<strong>标题</strong>
@@ -17,10 +17,10 @@
 </template>
 
 <script lang="ts">
-	import Dialog from "../lib/Dialog.vue";
-	import Button from "../lib/Button.vue";
+	import Dialog from "../../lib/Dialog.vue";
+	import Button from "../../lib/Button.vue";
 	import { ref, h } from "vue";
-	import { openDialog } from "../lib/openDialog";
+	import { openDialog } from "../../lib/openDialog";
 	export default {
 		components: {
 			Dialog,

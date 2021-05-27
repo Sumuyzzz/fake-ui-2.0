@@ -3,10 +3,10 @@ import Home from './view/Home.vue'
 import Document from './view/Document.vue'
 import { h } from 'vue'
 import MarkDown from './Document/MarkDown.vue'
-import SwitchDemo from './components/SwitchDemo.vue'
-import ButtonDemo from './components/ButtonDemo.vue'
-import DialogDemo from './components/DialogDemo.vue'
-import TabsDemo from './components/TabsDemo.vue'
+import SwitchDemo from './components/SwitchDemos/SwitchDemo.vue'
+import ButtonDemo from './components/ButtonDemos/ButtonDemo.vue'
+import DialogDemo from './components/DialogDemos/DialogDemo.vue'
+import TabsDemo from './components/TabsDemos/TabsDemo.vue'
 
 
 const history = createWebHashHistory()

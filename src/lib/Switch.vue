@@ -4,7 +4,7 @@
 		@click="toggle"
 		:class="{ 'fake-checked': value }"
 	>
-		<span class="fake-loadingIndicator"></span>
+		<span></span>
 	</button>
 </template>
 
@@ -25,34 +25,33 @@
 <style lang="scss" >
 	$h: 22px;
 	$h2: $h - 5px;
-	$original-background: rgb(55, 0, 255);
-	$checked-background: rgb(255, 0, 0);
+	$original-background: rgb(87, 87, 87);
+	$checked-background: rgb(255, 70, 70);
 
 	.fake-switch {
 		height: $h;
 		width: $h * 2;
-		border: 1px solid rgb(210, 210, 210);
+		border: none;
 		background: $original-background;
 		border-radius: $h/2;
 		position: relative;
 
 		span {
 			position: absolute;
-			top: 1px;
-			left: 1px;
+			top: 2px;
+			left: 2px;
 			height: $h2;
 			width: $h2;
 			background: white;
 			border-radius: $h2 / 2;
+			transition: all 250ms ease-in-out;
 		}
 
 		&.fake-checked {
 			background: $checked-background;
-		}
-
-		&.fake-checked > span {
-			left: calc(100% - #{$h2} - 2px);
-			transition: all 250ms;
+			> span {
+				left: calc(100% - #{$h2} - 2px);
+			}
 		}
 
 		&.fake-active {

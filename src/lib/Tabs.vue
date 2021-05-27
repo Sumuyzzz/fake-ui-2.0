@@ -1,6 +1,6 @@
 <template>
   <div class="fake-tabs">
-    <div ref="container" class="fake-tabs-nav">
+    <div ref="nav" class="fake-tabs-nav">
       <div v-for="(title,index) in titles" :key="index" :ref="el=>{if(el)navItems[index]=el}"
            :class="{selected: title=== selected}" class="fake-tabs-nav-item"
            @click="select(title)">{{ title }}
@@ -8,7 +8,7 @@
       <div ref="indicator" class="fake-tabs-nav-indicator"></div>
     </div>
     <div class="fake-tabs-content">
-      <component :is="current" :key="selected" class="fake-tabs-content-item"/>
+      <component :is="current" :key="current.props.title" class="fake-tabs-content-item"/>
     </div>
 
   </div>
@@ -44,7 +44,7 @@ export default {
     }
     const navItems = ref<HTMLDivElement[]>([])
     const indicator = ref<HTMLDivElement>(null)
-    const container = ref<HTMLDivElement>(null)
+    const nav = ref<HTMLDivElement>(null)
     const x = () => {
       const divs = navItems.value
       const result = divs.find(div => div.classList.contains('selected'))
@@ -54,7 +54,7 @@ export default {
       indicator.value.style.width = width + 'px'
       const {
         left: left1
-      } = container.value.getBoundingClientRect()
+      } = nav.value.getBoundingClientRect()
       const {
         left: left2
       } = result.getBoundingClientRect()
@@ -71,7 +71,7 @@ export default {
       select,
       navItems,
       indicator,
-      container,
+      nav,
     }
   }
 }
