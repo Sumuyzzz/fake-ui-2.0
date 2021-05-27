@@ -10,7 +10,16 @@
 				<Button> 查看代码 </Button>
 			</div>
 			<div class="demo-code">
-				<pre>{{ DefultSwitch.__sourceCode }}</pre>
+				<pre
+					class="language-html"
+					v-html="
+						Prism.highlight(
+							DefultSwitch.__sourceCode,
+							Prism.languages.html,
+							'html'
+						)
+					"
+				></pre>
 			</div>
 		</div>
 		<div class="demo">
@@ -22,7 +31,16 @@
 				<Button>查看代码</Button>
 			</div>
 			<div class="demo-code">
-				<pre>{{ DisableSwitch.__sourceCode }}</pre>
+				<pre
+					class="language-html"
+					v-html="
+						Prism.highlight(
+							DisableSwitch.__sourceCode,
+							Prism.languages.html,
+							'html'
+						)
+					"
+				></pre>
 			</div>
 		</div>
 	</div>
@@ -32,11 +50,14 @@
 	import DisableSwitch from "./DisableSwitch.vue";
 	import DefultSwitch from "./DefultSwitch.vue";
 	import Button from "../../lib/Button.vue";
+	import "Prismjs";
+	import "prismjs/themes/prism.css";
 
+	console.log(window.Prism);
 	export default {
 		components: { DisableSwitch, Button },
 		setup() {
-			return { DefultSwitch, DisableSwitch };
+			return { DefultSwitch, DisableSwitch, Prism };
 		},
 	};
 </script>
