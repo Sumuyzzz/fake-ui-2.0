@@ -9,13 +9,10 @@
 <script lang="ts">
 	import DisableSwitch from "./DisableSwitch.vue";
 	import DefultSwitch from "./DefultSwitch.vue";
-	import Button from "../../lib/Button.vue";
-	import "Prismjs";
-	import "prismjs/themes/prism.css";
 	import Demo from "./Demo.vue";
 
 	export default {
-		components: { Button, Demo },
+		components: { Demo },
 		setup() {
 			return { DefultSwitch, DisableSwitch };
 		},
