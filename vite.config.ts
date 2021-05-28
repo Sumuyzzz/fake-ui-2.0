@@ -1,10 +1,10 @@
 // @ts-nocheck
-import { md } from './src/plugins/MarkDownTransform.md'
+import { md } from './plugins/MarkDownTransform'
 import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
 
 export default {
-	base: 'https://sumuyzzz.github.io/fakeUi-website-2.0/',
+	base: './',
 	assetsDir: 'assets',
 	plugins: [md()],
 	vueCustomBlockTransforms: {

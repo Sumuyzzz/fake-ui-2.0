@@ -5,7 +5,10 @@
 			<component :is="component" />
 		</div>
 		<div class="demo-actions">
-			<component :is="Button" @click="showCode">查看代码</component>
+			<component :is="Button" @click="showCode" v-if="!codeVisible"
+				>展示代码</component
+			>
+			<component :is="Button" @click="closeCode" v-else>关闭代码</component>
 		</div>
 		<div class="demo-code" v-show="codeVisible">
 			<pre class="language-html" v-html="Code" />
@@ -32,13 +35,15 @@
 				);
 			});
 			const codeVisible = ref(false);
-			const showCode = (): boolean => (codeVisible.value = !codeVisible.value);
+			const showCode = (): boolean => (codeVisible.value = true);
+			const closeCode = (): boolean => (codeVisible.value = false);
 			return {
 				Prism,
 				Button,
 				Code,
 				showCode,
 				codeVisible,
+				closeCode,
 			};
 		},
 	};

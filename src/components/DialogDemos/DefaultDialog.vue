@@ -3,7 +3,7 @@
 </demo>
 <template>
 	<div>
-		<Button @click="toggle">打开对话框</Button>
+		<Button @click="toggle">open</Button>
 		<Dialog
 			v-model:visible="boolean"
 			:closeOnClickOverlay="false"
@@ -11,11 +11,10 @@
 			:cancel="f2"
 		>
 			<template v-slot:content>
-				<strong>hi</strong>
-				<div>hi2</div>
+				<div>content</div>
 			</template>
 			<template v-slot:title>
-				<strong>加粗的标题</strong>
+				<strong>title</strong>
 			</template>
 		</Dialog>
 	</div>

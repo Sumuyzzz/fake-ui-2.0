@@ -23,20 +23,29 @@
 	</div>
 </template>
 <script lang="ts">
-	import { inject, Ref } from "vue";
-
+	import { inject, Ref, ref } from "vue";
+	import Tabs from "../lib/Tabs.vue";
+	import Tab from "../lib/Tab.vue";
 	export default {
+		component: {
+			Tabs,
+			Tab,
+		},
 		setup() {
 			const menuVisible = inject<Ref<Boolean>>("menuVisible");
 			const toggleMenu = () => {
 				menuVisible.value = !menuVisible.value;
 				console.log(menuVisible.value);
 			};
-			return { toggleMenu };
+			const selected = ref("导航2");
+			return { toggleMenu, selected };
 		},
 	};
 </script>
 <style lang="scss" scoped>
+	.router-link-active {
+		color: #eee;
+	}
 	.topnav {
 		background: #9cc2ea;
 		display: flex;
@@ -67,6 +76,9 @@
 
 			> li {
 				margin: 0 1em;
+				a {
+					display: block;
+				}
 			}
 		}
 

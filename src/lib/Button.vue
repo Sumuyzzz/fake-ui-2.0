@@ -94,7 +94,7 @@
 			color: $blue;
 			&:hover,
 			&:focus {
-				color: lighten($blue, 10%);
+				color: lighten($red, 10%);
 			}
 		}
 

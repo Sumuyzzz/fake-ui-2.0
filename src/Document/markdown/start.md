@@ -6,9 +6,9 @@
 import {Button} from 'fake-ui'
 
 export default {
-	components: {
-		Button
-	}
+ components: {
+   Button
+ }
 }
 ```
 
