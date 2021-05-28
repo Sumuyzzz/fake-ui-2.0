@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { md } from './src/plugins/MarkDownTransform'
+import { md } from './src/plugins/MarkDownTransform.md'
 import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
 
