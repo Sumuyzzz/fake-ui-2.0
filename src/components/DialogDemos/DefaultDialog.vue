@@ -5,7 +5,7 @@
 	<div>
 		<Button @click="toggle">打开对话框</Button>
 		<Dialog
-			v-model:visible="x"
+			v-model:visible="boolean"
 			:closeOnClickOverlay="false"
 			:ok="f1"
 			:cancel="f2"
@@ -31,16 +31,16 @@
 			Button,
 		},
 		setup() {
-			const x = ref(false);
+			const boolean = ref(false);
 			const toggle = () => {
-				x.value = !x.value;
+				boolean.value = !boolean.value;
 			};
 			const f1 = () => {
 				return false;
 			};
 			const f2 = () => {};
 			return {
-				x,
+				boolean,
 				toggle,
 				f1,
 				f2,

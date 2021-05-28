@@ -1,5 +1,4 @@
 <template>
-	<div>Dialog 示例</div>
 	<Demo :component="DefaultDialog" />
 	<Demo :component="ConfirmDialog" />
 </template>

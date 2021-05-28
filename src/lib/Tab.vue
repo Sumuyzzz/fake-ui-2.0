@@ -1,15 +1,14 @@
 <template>
-  <slot/>
+	<slot />
 </template>
 
 <script>
-export default {
-  props: {
-    title: String,
-    class: String
-  }
-
-};
+	export default {
+		props: {
+			title: String,
+			class: String,
+		},
+	};
 </script>
 
 <style>
