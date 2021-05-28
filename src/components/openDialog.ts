@@ -1,4 +1,4 @@
-import Dialog from "./Dialog.vue";
+import Dialog from "../lib/Dialog.vue";
 import { createApp, h } from "vue";
 export
     const openDialog = (options: { title: any; content: String; ok: Function; cancel: Function; }) => {
