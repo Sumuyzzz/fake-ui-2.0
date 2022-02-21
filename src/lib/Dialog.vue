@@ -54,7 +54,7 @@
 				}
 			};
 			const ok = () => {
-				if (props.ok?.() !== false) {
+				if (props.ok() !== false) {
 					close();
 				}
 			};
