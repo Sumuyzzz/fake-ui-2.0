@@ -1,6 +1,6 @@
 <template>
-	<button :class="classes" :disabled="disabled" class="fake-button">
-		<span v-if="loading" class="fake-loadingIndicator"></span>
+	<button :class='classes' :disabled='disabled' class='fake-button'>
+		<span v-if='loading' class='fake-loadingIndicator'></span>
 		<slot />
 	</button>
 </template>
