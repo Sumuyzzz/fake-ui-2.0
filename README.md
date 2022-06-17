@@ -8,7 +8,23 @@
 
 技术：vite+vue3+vue-router+vuex
 
+## 安装
+
+npm
+```bash
+npm install fake-ui --save
+```
+
+yarn
+```bash
+yarn fake-ui
+```
+
+
 ## 使用
+
+
+
 
 ### 开发
 
